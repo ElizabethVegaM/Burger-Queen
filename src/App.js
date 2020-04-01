@@ -2,16 +2,29 @@
 /* eslint-disable react/prefer-stateless-function */
 import React, { Component } from 'react';
 import './App.css';
-import Header from './components/Header/Header';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+// import Header from './components/Common/Header';
+import Welcome from './components/WelcomePage/Welcome';
 import Kitchen from './components/Kitchen/Kitchen';
-// import Main from './components/Waiter/Waiter';
+import Main from './components/Waiter/Main';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header />
-        <Kitchen />
+        <Router>
+          <Switch>
+            <Route exact path="/">
+              <Welcome />
+            </Route>
+            <Route path="/waiter">
+              <Main />
+            </Route>
+            <Route path="/kitchen">
+              <Kitchen />
+            </Route>
+          </Switch>
+        </Router>
       </div>
     );
   }
