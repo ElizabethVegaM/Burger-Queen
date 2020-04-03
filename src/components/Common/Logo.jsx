@@ -1,8 +1,15 @@
+/* eslint-disable react/require-default-props */
 import React from 'react';
-import LogoImg from '../../img/Heavenly Patties.png';
+import PropTypes from 'prop-types';
 
-const Logo = () => (
-  <img src={LogoImg} alt="BG Logo" className="logo" />
+const Logo = ({ source, altText, sourceClass }) => (
+  <img src={source} alt={altText} className={sourceClass} />
 );
+
+Logo.propTypes = {
+  source: PropTypes.string.isRequired,
+  altText: PropTypes.string,
+  sourceClass: PropTypes.string,
+};
 
 export default Logo;

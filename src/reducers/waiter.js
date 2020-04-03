@@ -1,5 +1,5 @@
 import {
-  GET_MENU, ADD_NAME, ADD_ITEM, REMOVE_ITEM, SEND_ORDER, CLEAN_ORDER,
+  ADD_NAME, ADD_ITEM, REMOVE_ITEM, SEND_ORDER, CLEAN_ORDER,
 } from '../actions/actionTypes';
 
 export default (
@@ -13,12 +13,6 @@ export default (
   action,
 ) => {
   switch (action.type) {
-    // ...state lo que hace es copiar el estado anterior y sobreescribe lo que se quiere modificar
-    case GET_MENU:
-      return {
-        ...state,
-        menu: action.payload,
-      };
     case ADD_NAME:
       return {
         ...state,

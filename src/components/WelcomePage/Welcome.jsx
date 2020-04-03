@@ -3,19 +3,26 @@ import { Container, Row, Col } from 'react-grid-system';
 import { Link } from 'react-router-dom';
 import Logo from '../Common/Logo';
 import CustomButton from '../Common/CustomButton';
+import imageLogo from '../../img/happy-burger.png' 
 
 const Welcome = () => (
-  <Container>
+  <Container className="welcome-container">
     <Row>
-      <Logo />
+      <Col sm={12}>
+        <Logo source={imageLogo} altText="Happy Burger Logo" sourceClass="welcome-logo" />
+      </Col>
     </Row>
     <Row>
-      <Link to="/waiter">
-        <CustomButton text="Comedor" />
-      </Link>
-      <Link to="/kitchen">
-        <CustomButton text="Cocina" />
-      </Link>
+      <Col sm={6}>
+        <Link to="/waiter">
+          <CustomButton text="Comedor" btnSize="large" />
+        </Link>
+      </Col>
+      <Col sm={6}>
+        <Link to="/kitchen">
+          <CustomButton text="Cocina" btnSize="large" />
+        </Link>
+      </Col>
     </Row>
   </Container>
 );

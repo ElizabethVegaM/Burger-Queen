@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 // import Header from './components/Common/Header';
 import Welcome from './components/WelcomePage/Welcome';
 import Kitchen from './components/Kitchen/Kitchen';
-import Main from './components/Waiter/Main';
+import Waiter from './components/Waiter/Waiter';
 
 class App extends Component {
   render() {
@@ -18,7 +18,7 @@ class App extends Component {
               <Welcome />
             </Route>
             <Route path="/waiter">
-              <Main />
+              <Waiter />
             </Route>
             <Route path="/kitchen">
               <Kitchen />

@@ -1,9 +1,15 @@
 .head {
-  background-color: #282c34;
+  background-color: #faab18;
   color: #fff;
-  padding: 5px;
   height: 20vh;
   display: flex;
+  align-items: center;
+  font-family: 'Lobster Two', cursive;
+}
+
+.head img {
+  height: 90%;
+  margin: 8px;
 }
 
 .logo {

@@ -1,4 +1,28 @@
 body {
-  font-family: 'Open Sans', sans-serif;
-  background-color: #464c5a;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #13c8d1;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  font-family: 'Montserrat', sans-serif!important;
+  font-weight: 600!important;
+  background-color: #faab18!important;
+}
+
+.welcome-container {
+  text-align: center;
+}
+
+.welcome-logo {
+  width: 35rem;
+  padding: 3rem;
+}
+.welcome-container a {
+  text-decoration: none;
+}
+
+.welcome-container .welcome-button {
+  font-size: 5rem;
 }

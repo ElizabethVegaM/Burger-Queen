@@ -1,0 +1,163 @@
+[ 
+  {
+    "id": "b1",
+    "item": "Hamburguesa vacuno",
+    "price": 1500,
+    "type": "burger",
+    "icon": "https://firebasestorage.googleapis.com/v0/b/lab-burger-queen.appspot.com/o/steak.png?alt=media&token=32255a9d-a9a0-478d-ae0f-87536181cb88"
+  },
+  {
+    "id": "b2",
+    "item": "Hamburguesa pollo",
+    "price": 1500,
+    "type": "burger",
+    "icon": "https://firebasestorage.googleapis.com/v0/b/lab-burger-queen.appspot.com/o/meat.png?alt=media&token=bb4ee225-b979-4aba-9643-3443a6fba8e2"
+  },
+  {
+    "id": "b3",
+    "item": "Hamburguesa soya",
+    "price": 1500,
+    "type": "burger",
+    "icon": "https://firebasestorage.googleapis.com/v0/b/lab-burger-queen.appspot.com/o/oat.png?alt=media&token=cf139427-c697-46c1-908b-e83afddb1e9b"
+  },
+  {
+    "id": "v1",
+    "item": "Lechuga",
+    "price": 200,
+    "type": "topping",
+    "icon": "https://firebasestorage.googleapis.com/v0/b/lab-burger-queen.appspot.com/o/salad-1.png?alt=media&token=3975798f-adf5-4e3e-9917-440e8b1e8bc3"
+  },
+  {
+    "id": "v2",
+    "item": "Tomate",
+    "price": 250,
+    "type": "topping",
+    "icon": "https://firebasestorage.googleapis.com/v0/b/lab-burger-queen.appspot.com/o/tomato.png?alt=media&token=7053f204-bd78-41ce-a787-54de2761b7ab"
+  },
+  {
+    "id": "v3",
+    "item": "Palta",
+    "price": 350,
+    "type": "topping",
+    "icon": "https://firebasestorage.googleapis.com/v0/b/lab-burger-queen.appspot.com/o/avocado.png?alt=media&token=629277e0-f833-427a-a165-da02848dc6a4"
+    },
+  {
+    "id": "v4",
+    "item": "Cebolla",
+    "price": 250,
+    "type": "topping",
+    "icon": "https://firebasestorage.googleapis.com/v0/b/lab-burger-queen.appspot.com/o/onion.png?alt=media&token=2f1202fa-23d4-4199-9277-1902580b8225"
+  },
+  {
+    "id": "v5",
+    "item": "Pepinillos",
+    "price": 200,
+    "type": "topping",
+    "icon": "https://firebasestorage.googleapis.com/v0/b/lab-burger-queen.appspot.com/o/cucumber.png?alt=media&token=a17d4232-8e26-40a5-b354-58972a38477f"
+  },
+  {
+    "id": "v6",
+    "item": "Pimentón",
+    "price": 250,
+    "type": "topping",
+    "icon": "https://firebasestorage.googleapis.com/v0/b/lab-burger-queen.appspot.com/o/pepper.png?alt=media&token=cdc8801a-7a89-4512-a832-8dfc673cc1da"
+  },
+  {
+    "id": "v7",
+    "item": "Queso",
+    "price": 350,
+    "type": "topping",
+    "icon": "https://firebasestorage.googleapis.com/v0/b/lab-burger-queen.appspot.com/o/cheese-1.png?alt=media&token=6be39d35-0f59-41eb-b8c1-8e0f584697cf"
+  },
+  {
+    "id": "v8",
+    "item": "Huevo frito",
+    "price": 300,
+    "type": "topping",
+    "icon": "https://firebasestorage.googleapis.com/v0/b/lab-burger-queen.appspot.com/o/egg.png?alt=media&token=48edf93d-3482-44f8-af94-8c7faec1fee3"
+  },
+  {
+    "id": "v9",
+    "item": "Tocino",
+    "price": 350,
+    "type": "topping",
+    "icon": "https://firebasestorage.googleapis.com/v0/b/lab-burger-queen.appspot.com/o/bacon.png?alt=media&token=82b0a629-252a-4d62-8990-cb920d933b84"
+  },
+  {
+    "id": "t1",
+    "item": "Mayonesa",
+    "price": 0,
+    "type": "sauce",
+    "icon": "https://firebasestorage.googleapis.com/v0/b/lab-burger-queen.appspot.com/o/mustard-1.png?alt=media&token=27a4a077-ef56-41bc-ab66-02ecdd928b78"
+  },
+  {
+    "id": "t2",
+    "item": "Ketchup",
+    "price": 0,
+    "type": "sauce",
+    "icon": "https://firebasestorage.googleapis.com/v0/b/lab-burger-queen.appspot.com/o/mustard-2.png?alt=media&token=2758aed5-5095-4470-8989-069941933768"
+  },
+  {
+    "id": "t3",
+    "item": "Mostaza",
+    "price": 0,
+    "type": "sauce",
+    "icon": "https://firebasestorage.googleapis.com/v0/b/lab-burger-queen.appspot.com/o/mustard.png?alt=media&token=f907e418-d0f1-4ff5-b767-900fcf3063a6"
+  },
+  {
+    "id": "s1",
+    "item": "Papas fritas",
+    "price": 1000,
+    "type": "side",
+    "icon": "https://firebasestorage.googleapis.com/v0/b/lab-burger-queen.appspot.com/o/fries.png?alt=media&token=cb740614-549e-4fa0-ac7e-33c775dc84b6"
+  },
+  {
+    "id": "s2",
+    "item": "Aros de cebolla 10 un",
+    "price": 1200,
+    "type": "side",
+    "icon": "https://firebasestorage.googleapis.com/v0/b/lab-burger-queen.appspot.com/o/onion-1.png?alt=media&token=c0b62b48-3d3c-49d9-ab4f-473a54f90cf2"
+    },
+  {
+    "id": "s3",
+    "item": "Empanadas de queso 3un",
+    "price": 1000,
+    "type": "side",
+    "icon": "https://firebasestorage.googleapis.com/v0/b/lab-burger-queen.appspot.com/o/croissant.png?alt=media&token=3c0ee10e-45bb-4806-b80f-b92e37ac3661"
+  },
+  {
+    "id": "d1",
+    "item": "Café americano",
+    "price": 1000,
+    "type": "drink",
+    "icon": "https://firebasestorage.googleapis.com/v0/b/lab-burger-queen.appspot.com/o/coffee-maker.png?alt=media&token=98e3fa09-eb37-4004-be06-46b7b16778d7"
+  },
+  {
+    "id": "d2",
+    "item": "Café con leche",
+    "price": 1300,
+    "type": "drink",
+    "icon": "https://firebasestorage.googleapis.com/v0/b/lab-burger-queen.appspot.com/o/milk-1.png?alt=media&token=cbd32236-7c85-4724-931f-763fbe283886"
+  },
+  {
+    "id": "d3",
+    "item": "Té negro",
+    "price": 900,
+    "type": "drink",
+    "icon": "https://firebasestorage.googleapis.com/v0/b/lab-burger-queen.appspot.com/o/tea.png?alt=media&token=06fa0ccf-a3fd-4569-9b81-55831c9635f3"
+  },
+  {
+    "id": "d4",
+    "item": "Bebida",
+    "price": 900,
+    "type": "drink",
+    "icon": "https://firebasestorage.googleapis.com/v0/b/lab-burger-queen.appspot.com/o/can-1.png?alt=media&token=8835937f-0908-4e37-b0ac-25133be26bb5"
+  },
+  {
+    "id": "d5",
+    "item": "Jugo Natural",
+    "price": 1200,
+    "type": "drink",
+    "icon": "https://firebasestorage.googleapis.com/v0/b/lab-burger-queen.appspot.com/o/glass-5.png?alt=media&token=ac7317ad-a19b-4368-a3d0-9f7486aaf60d"
+  }
+]

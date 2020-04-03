@@ -1,13 +1,10 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
 
-const MenuHead = () => {
+const BurgerMenu = () => {
   return (
-    <nav className="menu">
-      <Button variant="contained">Desayuno</Button>
-      <Button variant="contained">Almuerzo</Button>
-    </nav>
+
   )
 };
 
-export default MenuHead;
+export default BurgerMenu;

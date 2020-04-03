@@ -1,26 +1,12 @@
-import axios from 'axios';
 import {
-  GET_MENU, ADD_NAME, ADD_ITEM, REMOVE_ITEM, SEND_ORDER, CLEAN_ORDER,
+  ADD_NAME, ADD_ITEM, REMOVE_ITEM, SEND_ORDER, CLEAN_ORDER,
 } from './actionTypes';
 
-export const getMenu = dispatch => () => {
-  axios.get('./menu.json')
-    .then((res) => {
-      dispatch({
-        type: GET_MENU,
-        payload: res.data,
-      });
-    })
-    // eslint-disable-next-line no-console
-    .catch(error => console.log(error));
-};
 
-export const addCustomerName = dispatch => (name) => {
-  dispatch({
-    type: ADD_NAME,
-    payload: name,
-  });
-};
+export const addCustomerName = name => ({
+  type: ADD_NAME,
+  payload: name,
+});
 
 export const addItem = dispatch => (item) => {
   dispatch({
