@@ -15,7 +15,7 @@ const CustomerName = () => {
   };
 
   return (
-    <Container>
+    <Container className="costumer-container">
       <Row>
         <Col>
           <span>Cliente:</span>

@@ -8,19 +8,9 @@ const MenuOptions = ({
   id, icon, name, price, clickFunc,
 }) => (
   <Button size="small" value={id} variant="contained" key={id} onClick={clickFunc} className="menu-option-btn">
-    <Container>
-      <Row>
-        <Col sm={3}>
-          <img src={icon} alt="menu-icon" />
-        </Col>
-        <Col sm={9}>
-          <Row>
-            <p>{name}</p>
-            <p>${price}</p>
-          </Row>
-        </Col>
-      </Row>
-    </Container>
+    <img src={icon} alt="menu-icon" />
+    <p>{name}</p>
+    <p>${price}</p>
   </Button>
 );
 

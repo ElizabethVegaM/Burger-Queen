@@ -8,33 +8,26 @@ export const addCustomerName = name => ({
   payload: name,
 });
 
-export const addItem = dispatch => (item) => {
-  dispatch({
-    type: ADD_ITEM,
-    payload: item,
-  });
-};
+export const addItem = item => ({
+  type: ADD_ITEM,
+  payload: item,
+});
 
-export const removeItem = dispatch => (item) => {
-  dispatch({
-    type: REMOVE_ITEM,
-    payload: item,
-  });
-};
+export const removeItem = item => ({
+  type: REMOVE_ITEM,
+  payload: item,
+});
 
-export const sendOrderToKitchen = dispatch => (order) => {
-  dispatch({
-    type: SEND_ORDER,
-    payload: order,
-  });
-};
+export const sendOrderToKitchen = order => ({
+  type: SEND_ORDER,
+  payload: order,
+});
 
-export const cleanOrder = dispatch => (order) => {
-  dispatch({
-    type: CLEAN_ORDER,
-    payload: order,
-  });
-};
+
+export const cleanOrder = order => ({
+  type: CLEAN_ORDER,
+  payload: order,
+});
 
 // se deben utilizar funciones puras
 // (que solo hacen una cosa y no dependen del ambiente en que están)

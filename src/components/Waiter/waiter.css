@@ -5,21 +5,43 @@
 
 .main-orders-container {
   padding-top: 20px;
+  margin: 0;
+}
+
+.main-orders-container h5 {
+  margin: 10px;
+}
+
+.costumer-container {
+  margin-bottom: 10px;
+}
+
+.costumer-container button {
+  margin-left: 10px;
+  background-color: #51813c!important;
+  color: #fff;
 }
 
 .large-menu-btn {
   background-color: #da2a27!important;
   color: #fff!important;
-  font-size: 18px!important;
+  font-size: 16px!important;
   margin: 5px!important;
 }
 
 .menu-option-btn {
-
+  background-color: #e0e0e0!important;
+  margin: 5px!important;
+  padding-top: 0!important;
 }
 
 .menu-option-btn img {
-  height: 40px;
+  height: 30px;
+  padding: 8px 4px;
+}
+
+.menu-option-btn p {
+  margin: 10px;
 }
 
 .hideBtn {

@@ -5,7 +5,6 @@ import {
 export default (
   // estado anterior(o inicial)
   state = {
-    menu: [],
     name: '',
     order: [],
     final: {},
