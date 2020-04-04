@@ -36,6 +36,15 @@ const Waiter = () => {
     }
   };
 
+  const addToOrder = (item) => {
+    const tempObj = {
+      id: item.id,
+      item: item.item,
+      price: item.price,
+    };
+    dispatch(addItem(tempObj));
+  };
+
   return (
     <Container className="main-page">
       <Header text="Registro de Pedidos" />
@@ -45,11 +54,11 @@ const Waiter = () => {
           <CustomButton text="Hamburguesas" btnSize="large" clickFunc={() => showMenu('burgers')} cssClass="large-menu-btn" />
           <CustomButton text="Acompañamientos" btnSize="large" clickFunc={() => showMenu('sides')} cssClass="large-menu-btn" />
           <CustomButton text="Bebestibles" btnSize="large" clickFunc={() => showMenu('drinks')} cssClass="large-menu-btn" />
-          {showMeals && showMeals.map(el => <MenuOption key={el.id} id={el.id} icon={el.icon} name={el.item} price={el.price} clickFunc={() => dispatch(addItem(el))} />)}
+          {showMeals && showMeals.map(el => <MenuOption key={el.id} id={el.id} icon={el.icon} name={el.item} price={el.price} clickFunc={() => addToOrder(el)} />)}
           {fillings && <h5>Ingredientes</h5>}
-          {fillings && toppings.map(el => <MenuOption key={el.id} id={el.id} icon={el.icon} name={el.item} price={el.price} clickFunc={() => dispatch(addItem(el))} />)}
+          {fillings && toppings.map(el => <MenuOption key={el.id} id={el.id} icon={el.icon} name={el.item} price={el.price} clickFunc={() => addToOrder(el)} />)}
           {fillings && <h5>Salsas</h5>}
-          {fillings && sauces.map(el => <MenuOption key={el.id} id={el.id} icon={el.icon} name={el.item} price={el.price} clickFunc={() => dispatch(addItem(el))} />)}
+          {fillings && sauces.map(el => <MenuOption key={el.id} id={el.id} icon={el.icon} name={el.item} price={el.price} clickFunc={() => addToOrder(el)} />)}
         </Col>
         <Col sm={4}>
           <h3>Lista de Pedido</h3>

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Container, Row } from 'react-grid-system';
 import Button from '@material-ui/core/Button';
 import { useDispatch, shallowEqual, useSelector } from 'react-redux';
-import { cleanOrder } from '../../actions/waiter';
+import { cleanOrder, removeItem } from '../../actions/waiter';
 import OrderItem from './OrderItem';
 import firebase from '../Firebase/firestore';
 
@@ -18,8 +18,10 @@ const Order = () => {
 
   useEffect(() => {
     const prices = order.map(el => el.price);
-    if (order && order.length >= 1) {
+    if (order.length >= 1) {
       addTotal(prices.reduce(add));
+    } else {
+      addTotal(0);
     }
   }, [order]);
 
@@ -30,7 +32,7 @@ const Order = () => {
       items: order,
       price: orderTotal,
     };
-    if (name.length > 2 && order) {
+    if (name.length > 1 && order) {
       db.settings({
         timestampsInSnapshots: true,
       });
@@ -55,7 +57,7 @@ const Order = () => {
         </p>
       </Row>
       <Row>
-        {order && order.map(el => <OrderItem key={el.id} item={el.item} price={el.price} />)}
+        {order && order.map(el => <OrderItem key={el.id} item={el.item} price={el.price} clickFunc={() => dispatch(removeItem(el))} />)}
         <p>TOTAL</p>
         <p>{orderTotal}</p>
         <Button type="button" variant="contained" color="primary" onClick={() => sendOrder()}>ENVIAR</Button>

@@ -39,7 +39,6 @@ export default (
         order: [],
         final: {},
       };
-    // siempre se debe tener un default para todos aquellos casos que no están incluidos
     default: return state;
   }
 };
