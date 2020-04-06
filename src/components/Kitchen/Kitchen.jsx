@@ -1,70 +1,50 @@
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable no-console */
 /* eslint-disable no-useless-constructor */
-import React, { Component } from 'react';
-import { Container } from 'react-grid-system';
-import Table from '@material-ui/core/Table';
-import TableBody from '@material-ui/core/TableBody';
-import TableCell from '@material-ui/core/TableCell';
-import TableHead from '@material-ui/core/TableHead';
-import TableRow from '@material-ui/core/TableRow';
-import Paper from '@material-ui/core/Paper';
+import React, { useState, useEffect } from 'react';
+import './kitchen.css';
+import { Container, Row, Col } from 'react-grid-system';
+import Header from '../Common/Header';
 import firebase from '../Firebase/firestore';
 
-class Kitchen extends Component {
-  constructor() {
-    super();
-    this.state = {
-      ordersList: [],
-    };
-  }
+const Kitchen = () => {
+  const [everyOrder, getOrders] = useState(null);
 
-  componentWillMount() {
+  useEffect(() => {
     const db = firebase.firestore();
     db.collection('ordersList')
       .onSnapshot((snapshot) => {
         if (snapshot.size) {
-          const messages = [];
-          snapshot.forEach(doc => messages.push(doc.data()));
-          this.setState({
-            ordersList: messages,
+          const orders = [];
+          snapshot.forEach(doc => orders.push(doc.data()));
+          getOrders({
+            ordersList: orders,
           });
         } else {
-          this.setState({ ordersList: null });
+          getOrders({ ordersList: null });
         }
       });
-  }
+  });
 
-  render() {
-    return (
-      <Container>
-        <Paper>
-          <Table>
-            <TableHead>
-              <TableRow>
-                <TableCell>Pedido</TableCell>
-                <TableCell align="right">Cliente</TableCell>
-                <TableCell align="right">Estado</TableCell>
-                <TableCell align="right">Estado</TableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {this.state.ordersList.map(row => (
-                <TableRow>
-                  <TableCell component="th" scope="row">
-                    {row.items}
-                  </TableCell>
-                  <TableCell align="right">{row.client}</TableCell>
-                  <TableCell align="right">En preparación</TableCell>
-                  <TableCell align="right">En preparación</TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </Paper>
-      </Container>
-    );
-  }
-}
+  return (
+    <Container className="main-page">
+      <Header text="Estado de Pedidos" />
+      <Row className="main-orders-container kitchen-container">
+        {everyOrder && everyOrder.ordersList.map(order => (
+          <Col sm={2} className="kitchen-order-container">
+            <p>{order.time}</p>
+            <p className="kitchen-client-name">{`Cliente: ${order.client}`}</p>
+            <p>Pedido:</p>
+            <ul>
+              {order.items.map(item => <li>{item.item}</li>)}
+            </ul>
+            <p>{`Total: $${order.price}`}</p>
+            <p>{`Estado: ${order.status}`}</p>
+          </Col>
+        ))}
+      </Row>
+    </Container>
+  );
+};
 
 export default Kitchen;

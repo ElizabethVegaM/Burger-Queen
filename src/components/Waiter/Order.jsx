@@ -27,18 +27,20 @@ const Order = () => {
 
   const sendOrder = () => {
     const db = firebase.firestore();
+    const today = new Date();
+    const time = `${today.getHours()}:${today.getMinutes()}:${today.getSeconds()}`;
     const total = {
+      time,
       client: name,
       items: order,
       price: orderTotal,
+      status: 'En Cola',
     };
+    console.log(total);
     if (name.length > 1 && order) {
-      db.settings({
-        timestampsInSnapshots: true,
-      });
       db.collection('ordersList').add(total)
         .then((docRef) => {
-          alert(`Pedido enviado exitosamente${docRef}`);
+          alert(`Pedido enviado exitosamente ${docRef}`);
           dispatch(cleanOrder());
           addTotal(0);
         })
@@ -52,16 +54,24 @@ const Order = () => {
     <Container>
       <Row>
         <p>
-        CLIENTE:
+        Cliente:
           <span>{name}</span>
         </p>
       </Row>
-      <Row>
+      <Row className="order-list">
         {order && order.map(el => <OrderItem key={el.id} item={el.item} price={el.price} clickFunc={() => dispatch(removeItem(el))} />)}
-        <p>TOTAL</p>
-        <p>{orderTotal}</p>
-        <Button type="button" variant="contained" color="primary" onClick={() => sendOrder()}>ENVIAR</Button>
       </Row>
+      <div className="order-total-container">
+        <Row>
+          <p>
+            TOTAL:
+            <span>{`$ ${orderTotal}`}</span>
+          </p>
+        </Row>
+        <Row>
+          <Button type="button" variant="contained" color="primary" onClick={() => sendOrder()}>ENVIAR</Button>
+        </Row>
+      </div>
     </Container>
   );
 };

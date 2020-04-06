@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'react-grid-system';
 import { Link } from 'react-router-dom';
 import Logo from '../Common/Logo';
 import CustomButton from '../Common/CustomButton';
-import imageLogo from '../../img/happy-burger.png' 
+import imageLogo from '../../img/happy-burger.png';
 
 const Welcome = () => (
   <Container className="welcome-container">

@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import React, { useState } from 'react';
 import './waiter.css';
 import { Container, Row, Col } from 'react-grid-system';
@@ -36,32 +37,25 @@ const Waiter = () => {
     }
   };
 
-  const addToOrder = (item) => {
-    const tempObj = {
-      id: item.id,
-      item: item.item,
-      price: item.price,
-    };
-    dispatch(addItem(tempObj));
-  };
-
   return (
     <Container className="main-page">
       <Header text="Registro de Pedidos" />
       <Row className="main-orders-container">
-        <Col sm={8}>
+        <Col sm={7.5}>
           <CostumerName />
-          <CustomButton text="Hamburguesas" btnSize="large" clickFunc={() => showMenu('burgers')} cssClass="large-menu-btn" />
-          <CustomButton text="Acompañamientos" btnSize="large" clickFunc={() => showMenu('sides')} cssClass="large-menu-btn" />
-          <CustomButton text="Bebestibles" btnSize="large" clickFunc={() => showMenu('drinks')} cssClass="large-menu-btn" />
-          {showMeals && showMeals.map(el => <MenuOption key={el.id} id={el.id} icon={el.icon} name={el.item} price={el.price} clickFunc={() => addToOrder(el)} />)}
+          <Row>
+            <CustomButton text="Hamburguesas" btnSize="large" clickFunc={() => showMenu('burgers')} cssClass="large-menu-btn" />
+            <CustomButton text="Acompañamientos" btnSize="large" clickFunc={() => showMenu('sides')} cssClass="large-menu-btn" />
+            <CustomButton text="Bebestibles" btnSize="large" clickFunc={() => showMenu('drinks')} cssClass="large-menu-btn" />
+          </Row>
+          {showMeals && showMeals.map(el => <MenuOption key={el.id} id={el.id} icon={el.icon} name={el.item} price={el.price} clickFunc={() => dispatch(addItem(el))} />)}
           {fillings && <h5>Ingredientes</h5>}
-          {fillings && toppings.map(el => <MenuOption key={el.id} id={el.id} icon={el.icon} name={el.item} price={el.price} clickFunc={() => addToOrder(el)} />)}
+          {fillings && toppings.map(el => <MenuOption key={el.id} id={el.id} icon={el.icon} name={el.item} price={el.price} clickFunc={() => dispatch(addItem(el))} />)}
           {fillings && <h5>Salsas</h5>}
-          {fillings && sauces.map(el => <MenuOption key={el.id} id={el.id} icon={el.icon} name={el.item} price={el.price} clickFunc={() => addToOrder(el)} />)}
+          {fillings && sauces.map(el => <MenuOption key={el.id} id={el.id} icon={el.icon} name={el.item} price={el.price} clickFunc={() => dispatch(addItem(el))} />)}
         </Col>
-        <Col sm={4}>
-          <h3>Lista de Pedido</h3>
+        <Col sm={4} className="order-list-container">
+          <h3>Pedido</h3>
           <Order />
         </Col>
       </Row>
