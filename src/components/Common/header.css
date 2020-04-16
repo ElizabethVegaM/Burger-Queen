@@ -4,6 +4,7 @@
   height: 15vh;
   display: flex;
   align-items: center;
+  justify-content: space-around;  
   font-family: 'Lobster Two', cursive;
 }
 
@@ -16,6 +17,7 @@
   height: 100%;
 }
 
-header h3 {
-  margin-top: 7vh;
+.header-time {
+  font-size: 30px;
+
 }

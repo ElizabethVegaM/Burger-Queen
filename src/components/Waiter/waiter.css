@@ -5,7 +5,7 @@
 }
 
 .main-orders-container {
-  padding-top: 20px;
+  padding-top: 15px;
   margin: 0!important;
 }
 
@@ -36,7 +36,7 @@
 
 .menu-option-btn {
   background-color: #e0e0e0!important;
-  margin: 5px!important;
+  margin: 3px!important;
   padding-top: 0!important;
 }
 
@@ -61,7 +61,7 @@
   overflow-y: scroll;
 }
 
-.order-text li {
+.order-list li {
   padding: 0!important;
 }
 

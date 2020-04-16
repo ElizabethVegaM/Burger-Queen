@@ -1,3 +1,5 @@
+/* eslint-disable no-alert */
+/* eslint-disable no-undef */
 import React, { useState, useEffect } from 'react';
 import { Container, Row } from 'react-grid-system';
 import Button from '@material-ui/core/Button';
@@ -36,17 +38,18 @@ const Order = () => {
       price: orderTotal,
       status: 'En Cola',
     };
-    console.log(total);
     if (name.length > 1 && order) {
       db.collection('ordersList').add(total)
         .then((docRef) => {
-          alert(`Pedido enviado exitosamente ${docRef}`);
+          alert(`Pedido enviado exitosamente ${docRef.id}`);
           dispatch(cleanOrder());
           addTotal(0);
         })
         .catch((error) => {
           console.error('Error adding document: ', error);
         });
+    } else {
+      alert('Debe llenar los campos');
     }
   };
 
