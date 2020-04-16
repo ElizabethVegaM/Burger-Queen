@@ -4,6 +4,7 @@
 import React, { useState, useEffect } from 'react';
 import './kitchen.css';
 import { Container, Row, Col } from 'react-grid-system';
+import moment from 'moment';
 import Button from '@material-ui/core/Button';
 import Header from '../Common/Header';
 import firebase from '../Firebase/firestore';
@@ -33,8 +34,6 @@ const Kitchen = () => {
   });
 
   const finishOrder = (ref) => {
-    const today = new Date();
-    const time = `${today.getHours()}:${today.getMinutes()}:${today.getSeconds()}`;
     db.collection('ordersList').doc(ref)
       .update({
         status: 'Listo',
@@ -62,7 +61,7 @@ const Kitchen = () => {
             </ul>
             <p>{`Total: $${order.order.price}`}</p>
             <p>{`Estado: ${order.order.status}`}</p>
-            <Button type="button" className="button" onClick={finishOrder(order.id)}>
+            <Button type="button" className="button" onClick={() => finishOrder(order.id)}>
           Terminar orden
             </Button>
           </Col>
