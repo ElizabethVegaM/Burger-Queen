@@ -70,7 +70,7 @@ const Kitchen = () => {
       </Row>
       <Col sm={12} className="history-orders-container">
         <p>Pedidos Anteriores</p>
-        <Row>
+        <Row className="history-container">
           {historyOrders && historyOrders.map(order => (
             <Col sm={1} className="history-order">
               <p>{`Cliente: ${order.order.client}`}</p>
