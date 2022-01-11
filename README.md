@@ -9,6 +9,7 @@ Es una aplicación web que se encarga de tomar los pedidos de un restaurante fic
 * Material UI 3.9.4
 * Firebase 6.2.0
 * React Redux 7.0.3
+* React Router 5.1.2
 * Eslint 5.16.0 (_para buenas prácticas y estilos de código_)
 
 ## Despliegue 📦
